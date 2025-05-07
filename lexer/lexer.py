@@ -9,17 +9,6 @@ TOKEN_SPEC = [
     ('WHITESPACE', r'[ \t\n]+')
 ]
 
-import re
-
-# Token specification: token type + regex pattern
-TOKEN_SPEC = [
-    ('KEYWORD',    r'\bint\b|\breturn\b'),
-    ('INTEGER',    r'\d+'),
-    ('IDENTIFIER', r'[a-zA-Z_][a-zA-Z0-9_]*'),
-    ('SYMBOL',     r'[(){};]'), 
-    ('WHITESPACE', r'[ \t\n]+')
-]
-
 token_regex = "|".join(f"(?P<{name}>{pattern})" for name, pattern in TOKEN_SPEC)
 get_token = re.compile(token_regex).match
 
