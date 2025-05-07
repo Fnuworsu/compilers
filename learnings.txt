@@ -20,7 +20,3 @@ Integers
    from the source code => (python3 main.py return_2.c)
 
    parsing the whole program with one big reg expression isn't a viable long term strategy
-   splitting up the compiler into 3 stages is the go to:
-      1. lexing
-      2. parsing
-      3. code generation
