@@ -1,4 +1,6 @@
-# Assembly code generator
+"""
+Assembly code generator
+"""
 def generate(ast):
     lines = [
         f".globl _{ast.fun_decl.name}",

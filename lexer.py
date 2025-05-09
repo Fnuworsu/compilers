@@ -1,7 +1,9 @@
 from parser import ParserError
 import re
 
-"""Lexer implementation"""
+"""
+Lexer implementation
+"""
 def lexer(source):
     token_specification = [
         ('KEYWORD', r'\b(int|return)\b'),

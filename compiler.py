@@ -4,7 +4,9 @@ from lexer import lexer
 from parser import parse
 from generate import generate
 
-# Main compiler logic
+"""
+Main compiler logic 
+"""
 def compile_source(file_path):
     with open(file_path, 'r') as f:
         source_code = f.read()

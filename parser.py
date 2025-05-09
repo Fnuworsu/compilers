@@ -4,7 +4,9 @@ from tokens import KEYWORD, IDENTIFIER, INTEGER, OPEN_BRACE, CLOSE_BRACE, OPEN_P
 class ParserError(Exception):
     pass
 
-# Parser implementation
+"""
+Parser implementation
+"""
 class Parser:
     def __init__(self, tokens):
         self.tokens = tokens
@@ -22,13 +24,19 @@ class Parser:
         return Exp(val)
 
     def parse_statement(self):
-        self.consume(KEYWORD)  # 'return'
+        """
+        return
+        """
+        self.consume(KEYWORD)
         exp = self.parse_exp()
         self.consume(SEMICOLON)
         return Return(exp)
 
     def parse_fun_decl(self):
-        self.consume(KEYWORD)  # 'int'
+        """
+        int
+        """
+        self.consume(KEYWORD) 
         name = self.consume(IDENTIFIER)
         self.consume(OPEN_PAREN)
         self.consume(CLOSE_PAREN)
